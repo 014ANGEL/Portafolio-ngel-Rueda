@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ===== METADATOS ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Angel Rueda, aprendiz de Análisis y Desarrollo de Software en el SENA.">
+  <meta name="author" content="Angel Rueda">
+  <meta name="theme-color" content="#0E2A47">
+  <title>Angel Rueda — Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+  <!-- Enlace de salto para accesibilidad -->
+  <a class="salto-enlace" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <div class="marca">
+        <span class="marca__placa">PLANO N.º 01</span>
+        <h1 class="marca__nombre">Angel Rueda</h1>
+        <p class="marca__rol">Aprendiz de Análisis y Desarrollo de Software — SENA, Bucaramanga</p>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navPrincipal">
+        <span class="menu-toggle__linea"></span>
+        <span class="menu-toggle__linea"></span>
+        <span class="menu-toggle__linea"></span>
+        <span class="sr-solo">Abrir menú</span>
+      </button>
+
+      <nav class="nav" id="navPrincipal">
+        <ul class="nav__lista">
+          <li><a href="#sobre-mi" class="nav__enlace">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav__enlace">Proyectos</a></li>
+          <li><a href="#habilidades" class="nav__enlace">Habilidades</a></li>
+          <li><a href="#contacto" class="nav__enlace">Contacto</a></li>
+        </ul>
+        <button class="modo-toggle" id="modoToggle" type="button" aria-pressed="false">
+          <span class="modo-toggle__icono" aria-hidden="true"></span>
+          <span class="modo-toggle__texto">Modo plano</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Engranaje decorativo: guiño al apellido "Rueda" -->
+    <svg class="engranaje" viewBox="0 0 100 100" aria-hidden="true">
+      <g class="engranaje__grupo">
+        <circle cx="50" cy="50" r="18" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="50" cy="50" r="6" fill="currentColor"/>
+        <g class="engranaje__dientes">
+          <rect x="46" y="4" width="8" height="14" fill="currentColor"/>
+          <rect x="46" y="82" width="8" height="14" fill="currentColor"/>
+          <rect x="82" y="46" width="14" height="8" fill="currentColor"/>
+          <rect x="4" y="46" width="14" height="8" fill="currentColor"/>
+          <rect x="18" y="18" width="10" height="10" fill="currentColor" transform="rotate(45 23 23)"/>
+          <rect x="72" y="18" width="10" height="10" fill="currentColor" transform="rotate(45 77 23)"/>
+          <rect x="18" y="72" width="10" height="10" fill="currentColor" transform="rotate(45 23 77)"/>
+          <rect x="72" y="72" width="10" height="10" fill="currentColor" transform="rotate(45 77 77)"/>
+        </g>
+      </g>
+    </svg>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main id="contenido">
+
+    <!-- ---- SOBRE MÍ ---- -->
+    <section id="sobre-mi" class="plano">
+      <div class="plano__cabecera">
+        <span class="plano__placa">01</span>
+        <h2 class="plano__titulo">Sobre mí</h2>
+      </div>
+
+      <div class="sobre-mi__cuerpo">
+        <figure class="avatar">
+          <!-- Reemplaza foto.jpg por tu foto real (archivo local en esta misma carpeta) -->
+          <img src="foto.jpg" alt="Foto de Angel Rueda" width="180" height="180"
+               onerror="this.replaceWith(document.getElementById('avatarInicial').content.cloneNode(true))">
+          <figcaption>Angel Rueda 👋</figcaption>
+        </figure>
+
+        <div class="sobre-mi__texto">
+          <p>
+            <!-- ✏️ EDITA este párrafo con tu historia real: quién eres, qué estudias y qué te apasiona -->
+            Soy aprendiz de <strong>Análisis y Desarrollo de Software</strong> en el SENA de Bucaramanga.
+            Me interesa construir cosas que <em>funcionen bien</em> y que se entiendan a simple vista:
+            código ordenado, interfaces claras y proyectos que resuelvan problemas reales.
+            Estoy aprendiendo HTML, CSS y JavaScript, y disfruto documentar cada paso del camino.
+          </p>
+          <p>
+            Fuera del código, me gusta <mark>armar y desarmar cosas</mark> para entender cómo funcionan
+            — quizás por algo llevo "Rueda" de apellido.
+          </p>
+          <a class="boton boton--fantasma" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- PROYECTOS ---- -->
+    <section id="proyectos" class="plano plano--alterno">
+      <div class="plano__cabecera">
+        <span class="plano__placa">02</span>
+        <h2 class="plano__titulo">Proyectos</h2>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="tarjeta__estado">🚧 en construcción</span>
+          <h3>Proyecto de equipo — SENA</h3>
+          <p>Trabajo colaborativo en desarrollo con mis compañeros de ficha, aplicando lo visto en clase.</p>
+          <ul class="tarjeta__etiquetas">
+            <li>HTML</li><li>CSS</li><li>Git</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <span class="tarjeta__estado">✅ activo</span>
+          <h3>Este portafolio</h3>
+          <p>Sitio personal construido con HTML semántico, CSS propio y JavaScript sin frameworks.</p>
+          <ul class="tarjeta__etiquetas">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta tarjeta--vacia">
+          <h3>Tu próximo proyecto</h3>
+          <p>Reemplaza esta tarjeta cuando termines tu siguiente práctica o reto de clase.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---- HABILIDADES ---- -->
+    <section id="habilidades" class="plano">
+      <div class="plano__cabecera">
+        <span class="plano__placa">03</span>
+        <h2 class="plano__titulo">Habilidades</h2>
+      </div>
+
+      <ul class="medidores">
+        <li class="medidor">
+          <div class="medidor__etiqueta"><span>HTML</span><span>90%</span></div>
+          <div class="medidor__pista"><div class="medidor__barra" data-nivel="90"></div></div>
+        </li>
+        <li class="medidor">
+          <div class="medidor__etiqueta"><span>CSS</span><span>75%</span></div>
+          <div class="medidor__pista"><div class="medidor__barra" data-nivel="75"></div></div>
+        </li>
+        <li class="medidor">
+          <div class="medidor__etiqueta"><span>JavaScript</span><span>50%</span></div>
+          <div class="medidor__pista"><div class="medidor__barra" data-nivel="50"></div></div>
+        </li>
+        <li class="medidor">
+          <div class="medidor__etiqueta"><span>Git / GitHub</span><span>60%</span></div>
+          <div class="medidor__pista"><div class="medidor__barra" data-nivel="60"></div></div>
+        </li>
+      </ul>
+      <p class="medidores__nota">
+        <!-- ✏️ Ajusta los porcentajes a tu nivel real. Reto extra: intenta agregar una &lt;table&gt;
+             debajo con estas mismas habilidades y su nivel en texto (bueno para practicar tablas). -->
+        Niveles aproximados y en constante actualización.
+      </p>
+    </section>
+
+    <!-- ---- CONTACTO ---- -->
+    <section id="contacto" class="plano plano--alterno">
+      <div class="plano__cabecera">
+        <span class="plano__placa">04</span>
+        <h2 class="plano__titulo">Contacto</h2>
+      </div>
+
+      <div class="contacto__cuerpo">
+        <form class="formulario" id="formularioContacto" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2" autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email">
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required minlength="10"></textarea>
+          </div>
+          <button type="submit" class="boton">Enviar mensaje</button>
+          <p class="formulario__estado" id="formularioEstado" role="status" aria-live="polite"></p>
+        </form>
+
+        <address class="datos-contacto">
+          <p>
+            <!-- ✏️ Cambia por tu correo y usuario de GitHub reales -->
+            📧 <a href="mailto:angel.rueda@ejemplo.com">angel.rueda@ejemplo.com</a>
+          </p>
+          <p>
+            💻 <a href="https://github.com/angel-rueda" target="_blank" rel="noopener noreferrer">github.com/angel-rueda</a>
+          </p>
+          <p>📍 Bucaramanga, Santander, Colombia</p>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie">
+    <hr>
+    <p>© <span id="anioActual">2026</span> Angel Rueda — Portafolio hecho en el curso de ADSO, SENA.</p>
+  </footer>
+
+  <!-- Plantilla de respaldo si foto.jpg no existe todavía -->
+  <template id="avatarInicial">
+    <div class="avatar__inicial" aria-hidden="true">AR</div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
