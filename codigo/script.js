@@ -42,22 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   secciones.forEach((seccion) => observador.observe(seccion));
 
-  // ---- Animar las barras de habilidades al entrar en pantalla ----
-  const barras = document.querySelectorAll('.medidor__barra');
-  const observadorBarras = new IntersectionObserver(
-    (entradas, obs) => {
-      entradas.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-          const barra = entrada.target;
-          barra.style.width = `${barra.dataset.nivel}%`;
-          obs.unobserve(barra);
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-  barras.forEach((barra) => observadorBarras.observe(barra));
-
   // ---- Modo "papel" (whiteprint) con memoria en el navegador ----
   const botonModo = document.getElementById('modoToggle');
   const modoGuardado = localStorage.getItem('portafolio-modo');

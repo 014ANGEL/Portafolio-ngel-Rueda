@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Angel Rueda, aprendiz de Análisis y Desarrollo de Software en el SENA.">
   <meta name="author" content="Angel Rueda">
-  <meta name="theme-color" content="#0E2A47">
+  <meta name="theme-color" content="#f5f9fc">
   <title>Angel Rueda — Portafolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="s.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -82,7 +82,7 @@
       <div class="sobre-mi__cuerpo">
         <figure class="avatar">
           <!-- Reemplaza foto.jpg por tu foto real (archivo local en esta misma carpeta) -->
-          <img src="foto.jpg" alt="Foto de Angel Rueda" width="180" height="180"
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85" alt="Foto de Angel Rueda" width="180" height="180"
                onerror="this.replaceWith(document.getElementById('avatarInicial').content.cloneNode(true))">
           <figcaption>Angel Rueda 👋</figcaption>
         </figure>
@@ -99,6 +99,11 @@
             Fuera del código, me gusta <mark>armar y desarmar cosas</mark> para entender cómo funcionan
             — quizás por algo llevo "Rueda" de apellido.
           </p>
+          <ul class="sobre-mi__lista">
+            <li>Interfaces claras y fáciles de usar</li>
+            <li>HTML semántico, CSS y JavaScript</li>
+            <li>Trabajo colaborativo con Git y GitHub</li>
+          </ul>
           <a class="boton boton--fantasma" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -146,27 +151,19 @@
 
       <ul class="medidores">
         <li class="medidor">
-          <div class="medidor__etiqueta"><span>HTML</span><span>90%</span></div>
-          <div class="medidor__pista"><div class="medidor__barra" data-nivel="90"></div></div>
+          <div class="medidor__etiqueta"><span>HTML</span></div>
         </li>
         <li class="medidor">
-          <div class="medidor__etiqueta"><span>CSS</span><span>75%</span></div>
-          <div class="medidor__pista"><div class="medidor__barra" data-nivel="75"></div></div>
+          <div class="medidor__etiqueta"><span>CSS</span></div>
         </li>
         <li class="medidor">
-          <div class="medidor__etiqueta"><span>JavaScript</span><span>50%</span></div>
-          <div class="medidor__pista"><div class="medidor__barra" data-nivel="50"></div></div>
+          <div class="medidor__etiqueta"><span>JavaScript</span></div>
         </li>
         <li class="medidor">
-          <div class="medidor__etiqueta"><span>Git / GitHub</span><span>60%</span></div>
-          <div class="medidor__pista"><div class="medidor__barra" data-nivel="60"></div></div>
+          <div class="medidor__etiqueta"><span>Git / GitHub</span></div>
         </li>
       </ul>
-      <p class="medidores__nota">
-        <!-- ✏️ Ajusta los porcentajes a tu nivel real. Reto extra: intenta agregar una &lt;table&gt;
-             debajo con estas mismas habilidades y su nivel en texto (bueno para practicar tablas). -->
-        Niveles aproximados y en constante actualización.
-      </p>
+      <p class="medidores__nota">Habilidades en constante actualización.</p>
     </section>
 
     <!-- ---- CONTACTO ---- -->
