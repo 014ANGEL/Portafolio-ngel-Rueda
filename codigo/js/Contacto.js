@@ -1,3 +1,7 @@
+// TAREA 4 — Validación con guardas + fetch (15 pts)
+// Si el mensaje trae http:// o https://, aviso y salgo con return.
+// Solo si pasa la guarda se hace el fetch.
+
 export class Contacto {
   constructor(formulario) {
     this.formulario = formulario;
@@ -48,7 +52,7 @@ export class Contacto {
       this.formulario.reset();
       this.formulario.dispatchEvent(new Event('reset'));
     } catch {
-      this.avisar('Sin conexión: el mensaje no salió. Abre el sitio con Live Server.');
+      this.avisar('Sin conexión: el mensaje no salió. Abre codigo/ con Live Server.');
     }
   }
 }

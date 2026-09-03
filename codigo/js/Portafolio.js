@@ -1,3 +1,7 @@
+// TAREA 2 — Datos desde JSON (15 pts)
+// pintarFrase() lee perfil.frase de datos.json y la pone en #frase.
+// Si cambias la frase en el JSON y recargas, cambia en la página.
+
 export class Portafolio {
   constructor(datos) {
     this.datos = datos;

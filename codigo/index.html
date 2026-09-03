@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Angel Rueda, aprendiz de Análisis y Desarrollo de Software en el SENA.">
+  <meta name="author" content="Angel Rueda">
+  <meta name="theme-color" content="#061018">
+  <title>Angel Rueda — Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="salto-enlace" href="#contenido">Saltar al contenido</a>
+  <div class="progreso-scroll" id="progresoScroll" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+  <div class="foco" id="foco" aria-hidden="true"></div>
+
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <a class="logo" href="#contenido">
+        <span class="logo__marca" aria-hidden="true">AR</span>
+        <span class="logo__nombre">Angel Rueda</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navPrincipal">
+        <span class="menu-toggle__linea"></span>
+        <span class="menu-toggle__linea"></span>
+        <span class="menu-toggle__linea"></span>
+        <span class="sr-solo" id="menuToggleTexto">Abrir menú</span>
+      </button>
+
+      <nav class="nav" id="navPrincipal" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a href="#sobre-mi" class="nav__enlace">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav__enlace">Proyectos</a></li>
+          <li><a href="#laboratorio" class="nav__enlace">Laboratorio</a></li>
+          <li><a href="#habilidades" class="nav__enlace">Habilidades</a></li>
+          <li><a href="#contacto" class="nav__enlace">Contacto</a></li>
+        </ul>
+        <button class="modo-toggle" id="modoToggle" type="button" aria-pressed="false">
+          <span class="modo-toggle__icono" aria-hidden="true"></span>
+          <span class="modo-toggle__texto">Modo papel</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section id="sobre-mi" class="plano hero">
+      <div class="hero__escena" aria-hidden="true">
+        <div class="hero__piso"></div>
+        <div class="hero__orbe hero__orbe--cian"></div>
+        <div class="hero__orbe hero__orbe--ambar"></div>
+      </div>
+
+      <div class="hero__cabecera">
+        <p class="marca__placa">Plano N.º 01 · ADSO / 2026</p>
+        <h1 class="hero__nombre">
+          <span>Angel</span>
+          <span>Rueda</span>
+        </h1>
+        <p class="hero__rol"><span id="textoMaquina" data-frases="Aprendiz ADSO · SENA Bucaramanga|HTML, CSS y JavaScript en 3D|Interfaces claras y usables"></span><span class="cursor-texto" aria-hidden="true">|</span></p>
+        <!-- TAREA 2: este bloque se llena desde datos.json con pintarFrase() -->
+        <blockquote id="frase" class="hero__frase"></blockquote>
+
+        <div class="hero__acciones">
+          <a class="boton" href="#proyectos">Ver proyectos</a>
+          <a class="boton boton--fantasma" href="#laboratorio">Abrir laboratorio</a>
+          <!-- TAREA 5: mejora libre -->
+          <button class="boton boton--fantasma" id="imprimirCV" type="button">Imprimir CV</button>
+        </div>
+
+        <ul class="stats">
+          <li><strong data-contador="5">0</strong><span>secciones</span></li>
+          <li><strong data-contador="3">0</strong><span>proyectos</span></li>
+          <li><strong data-contador="4">0</strong><span>habilidades</span></li>
+        </ul>
+
+        <button class="cubo" id="cubo" type="button" aria-pressed="false" aria-label="Pausar o reanudar el cubo 3D">
+          <div class="cubo__escena">
+            <div class="cubo__cara cubo__cara--frente">HTML</div>
+            <div class="cubo__cara cubo__cara--atras">CSS</div>
+            <div class="cubo__cara cubo__cara--derecha">JS</div>
+            <div class="cubo__cara cubo__cara--izquierda">GIT</div>
+            <div class="cubo__cara cubo__cara--arriba">ADSO</div>
+            <div class="cubo__cara cubo__cara--abajo">SENA</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="sobre-mi__cuerpo">
+        <figure class="avatar">
+          <button class="avatar__voltear" id="avatarVoltear" type="button" aria-pressed="false" aria-label="Voltear tarjeta del avatar">
+            <div class="avatar__escena">
+              <div class="avatar__cara avatar__cara--frente">
+                <div class="avatar__marco">
+                  <img src="foto.jpg" alt="Retrato de Angel Rueda" width="280" height="280"
+                       onerror="this.replaceWith(document.getElementById('avatarInicial').content.cloneNode(true))">
+                </div>
+              </div>
+              <div class="avatar__cara avatar__cara--atras">
+                <p>SENA</p>
+                <p>Bucaramanga</p>
+                <p>ADSO 2026</p>
+              </div>
+            </div>
+          </button>
+          <figcaption>Pulsa el avatar para voltearlo</figcaption>
+        </figure>
+
+        <div class="sobre-mi__texto">
+          <h2 class="plano__titulo plano__titulo--interno">Sobre mí</h2>
+          <p>
+            Soy aprendiz de <strong>Análisis y Desarrollo de Software</strong> en el SENA de Bucaramanga.
+            Me interesa construir cosas que <em>funcionen bien</em> y que se entiendan a simple vista:
+            código ordenado, interfaces claras y proyectos que resuelvan problemas reales.
+            Estoy aprendiendo HTML, CSS y JavaScript, y disfruto documentar cada paso del camino.
+          </p>
+          <p>
+            Fuera del código, me gusta <mark>armar y desarmar cosas</mark> para entender cómo funcionan
+            — quizás por algo llevo “Rueda” de apellido.
+          </p>
+          <ul class="sobre-mi__lista">
+            <li>Interfaces claras y fáciles de usar</li>
+            <li>HTML semántico, CSS y JavaScript</li>
+            <li>Trabajo colaborativo con Git y GitHub</li>
+          </ul>
+          <a class="boton boton--fantasma" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+
+          <details class="acordeon">
+            <summary>Datos rápidos</summary>
+            <ul>
+              <li>Ciudad: Bucaramanga, Santander</li>
+              <li>Enfoque: HTML semántico, CSS 3D y JavaScript</li>
+              <li>Estado: aprendiendo y documentando cada práctica</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="plano plano--alterno">
+      <div class="plano__cabecera">
+        <span class="plano__placa">02</span>
+        <h2 class="plano__titulo">Proyectos</h2>
+      </div>
+
+      <div class="filtros" role="group" aria-label="Filtrar proyectos">
+        <button type="button" class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="filtro" data-filtro="html" aria-pressed="false">HTML</button>
+        <button type="button" class="filtro" data-filtro="css" aria-pressed="false">CSS</button>
+        <button type="button" class="filtro" data-filtro="javascript" aria-pressed="false">JavaScript</button>
+        <button type="button" class="filtro" data-filtro="git" aria-pressed="false">Git</button>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta" data-tags="html css git">
+          <span class="tarjeta__estado">En construcción</span>
+          <h3>Proyecto de equipo — SENA</h3>
+          <p>Trabajo colaborativo en desarrollo con mis compañeros de ficha, aplicando lo visto en clase.</p>
+          <ul class="tarjeta__etiquetas">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+          </ul>
+          <button type="button" class="boton boton--mini" data-modal="equipo">Ver detalle</button>
+        </article>
+
+        <article class="tarjeta" data-tags="html css javascript">
+          <span class="tarjeta__estado">Activo</span>
+          <h3>Este portafolio</h3>
+          <p>Sitio personal construido con HTML semántico, CSS propio y JavaScript sin frameworks.</p>
+          <ul class="tarjeta__etiquetas">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <button type="button" class="boton boton--mini" data-modal="portafolio">Ver detalle</button>
+        </article>
+
+        <article class="tarjeta tarjeta--vacia" data-tags="html css javascript">
+          <h3>Laboratorio interactivo</h3>
+          <p>Terminal, filtros y animaciones 3D para practicar HTML, CSS y JavaScript.</p>
+          <ul class="tarjeta__etiquetas">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <button type="button" class="boton boton--mini" data-modal="laboratorio">Ver detalle</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="laboratorio" class="plano">
+      <div class="plano__cabecera">
+        <span class="plano__placa">03</span>
+        <h2 class="plano__titulo">Laboratorio</h2>
+      </div>
+
+      <div class="laboratorio">
+        <section class="terminal" aria-labelledby="tituloTerminal">
+          <h3 id="tituloTerminal">Terminal</h3>
+          <p class="terminal__ayuda">Escribe <kbd>help</kbd>, <kbd>sobre</kbd>, <kbd>proyectos</kbd>, <kbd>tema</kbd> o <kbd>clear</kbd>.</p>
+          <div class="terminal__salida" id="terminalSalida" tabindex="0" aria-live="polite">
+            <p>sesión iniciada · angel@rueda</p>
+            <p>escribe help para ver comandos</p>
+          </div>
+          <form class="terminal__formulario" id="formularioTerminal">
+            <label class="sr-solo" for="comandoTerminal">Comando</label>
+            <span aria-hidden="true">❯</span>
+            <input id="comandoTerminal" name="comando" type="text" autocomplete="off" spellcheck="false" placeholder="help">
+            <button type="submit" class="boton boton--mini">Enter</button>
+          </form>
+        </section>
+
+        <ol class="linea-tiempo">
+          <li>
+            <button type="button" class="linea-tiempo__nodo activo" data-paso="0" aria-pressed="true">HTML</button>
+            <p>Estructura semántica: header, main, section y footer.</p>
+          </li>
+          <li>
+            <button type="button" class="linea-tiempo__nodo" data-paso="1" aria-pressed="false">CSS</button>
+            <p>Volumen, perspectiva y un tema claro/oscuro con variables.</p>
+          </li>
+          <li>
+            <button type="button" class="linea-tiempo__nodo" data-paso="2" aria-pressed="false">JS</button>
+            <p>Menú, filtros, terminal y barras que se animan al aparecer.</p>
+          </li>
+        </ol>
+        <p class="linea-tiempo__detalle" id="lineaDetalle">Estructura semántica: header, main, section y footer.</p>
+      </div>
+    </section>
+
+    <section id="habilidades" class="plano">
+      <div class="plano__cabecera">
+        <span class="plano__placa">04</span>
+        <h2 class="plano__titulo">Habilidades</h2>
+      </div>
+
+      <ul class="medidores" id="listaHabilidades"></ul>
+      <p class="medidores__nota">Habilidades en constante actualización.</p>
+    </section>
+
+    <section id="contacto" class="plano plano--alterno">
+      <div class="plano__cabecera">
+        <span class="plano__placa">05</span>
+        <h2 class="plano__titulo">Contacto</h2>
+      </div>
+
+      <div class="contacto__cuerpo">
+        <form class="formulario" id="formularioContacto" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2" autocomplete="name" placeholder="Tu nombre">
+          </div>
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="400" placeholder="Cuéntame en qué te puedo ayudar"></textarea>
+            <small class="campo__ayuda"><span id="contadorMensaje">0</span>/400</small>
+          </div>
+          <button type="submit" class="boton">Enviar mensaje</button>
+          <p class="formulario__estado" id="formularioEstado" role="status" aria-live="polite"></p>
+        </form>
+
+        <address class="datos-contacto">
+          <p>
+            📧 <a href="mailto:angel.rueda@ejemplo.com">angel.rueda@ejemplo.com</a>
+            <button type="button" class="boton boton--mini" id="copiarCorreo" data-correo="angel.rueda@ejemplo.com">Copiar</button>
+          </p>
+          <p>
+            💻 <a href="https://github.com/014ANGEL" target="_blank" rel="noopener noreferrer">github.com/014ANGEL</a>
+          </p>
+          <p>📍 Bucaramanga, Santander, Colombia</p>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>© <span id="anioActual">2026</span> Angel Rueda — Portafolio hecho en el curso de ADSO, SENA. · <time id="reloj" class="reloj" datetime=""></time><!-- TAREA 3 --></p>
+  </footer>
+
+  <button class="ir-arriba" id="irArriba" type="button" hidden>Subir</button>
+
+  <dialog class="modal" id="modalProyecto">
+    <h2 id="modalTitulo"></h2>
+    <p id="modalTexto"></p>
+    <form method="dialog">
+      <button class="boton" type="submit">Cerrar</button>
+    </form>
+  </dialog>
+
+  <template id="avatarInicial">
+    <div class="avatar__inicial" aria-hidden="true">AR</div>
+  </template>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

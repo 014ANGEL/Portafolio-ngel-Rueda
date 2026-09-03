@@ -319,6 +319,7 @@ export function iniciarUI() {
     window.setTimeout(() => { copiar.textContent = 'Copiar'; }, 1600);
   });
 
+  // TAREA 5 — Mejora libre (10 pts): botón Imprimir CV
   const botonImprimir = document.getElementById('imprimirCV');
   botonImprimir?.addEventListener('click', () => window.print());
 }

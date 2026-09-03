@@ -1,3 +1,4 @@
+// TAREA 3 — Clase Reloj (POO + módulo) (15 pts)
 // Esta clase muestra la hora en el footer y la va actualizando sola.
 // Yo le paso el id del reloj, pinto la hora con Date y cada segundo
 // setInterval vuelve a llamar pintar() para que se vean los segundos pasar.
