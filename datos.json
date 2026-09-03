@@ -1,0 +1,17 @@
+{
+  "perfil": {
+    "nombre": "Angel Rueda",
+    "iniciales": "AR",
+    "rol": "Aprendiz de Análisis y Desarrollo de Software — SENA, Bucaramanga",
+    "frase": "Me gusta armar y desarmar las cosas hasta entender cómo funcionan. De los errores se aprende más que de las lecciones.",
+    "correo": "angel.rueda@ejemplo.com",
+    "github": "https://github.com/014ANGEL",
+    "ciudad": "Bucaramanga, Santander, Colombia"
+  },
+  "habilidades": [
+    { "nombre": "HTML", "nivel": 80 },
+    { "nombre": "CSS", "nivel": 70 },
+    { "nombre": "JavaScript", "nivel": 55 },
+    { "nombre": "Git / GitHub", "nivel": 65 }
+  ]
+}

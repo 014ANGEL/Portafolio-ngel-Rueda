@@ -66,10 +66,12 @@
           <span>Rueda</span>
         </h1>
         <p class="hero__rol"><span id="textoMaquina" data-frases="Aprendiz ADSO · SENA Bucaramanga|HTML, CSS y JavaScript en 3D|Interfaces claras y usables"></span><span class="cursor-texto" aria-hidden="true">|</span></p>
+        <blockquote id="frase" class="hero__frase"></blockquote>
 
         <div class="hero__acciones">
           <a class="boton" href="#proyectos">Ver proyectos</a>
           <a class="boton boton--fantasma" href="#laboratorio">Abrir laboratorio</a>
+          <button class="boton boton--fantasma" id="imprimirCV" type="button">Imprimir CV</button>
         </div>
 
         <ul class="stats">
@@ -239,44 +241,7 @@
         <h2 class="plano__titulo">Habilidades</h2>
       </div>
 
-      <ul class="medidores">
-        <li class="medidor">
-          <div class="medidor__etiqueta">
-            <span>HTML</span>
-            <span>80%</span>
-          </div>
-          <div class="medidor__pista" role="meter" aria-label="HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-            <div class="medidor__barra" data-nivel="80"></div>
-          </div>
-        </li>
-        <li class="medidor">
-          <div class="medidor__etiqueta">
-            <span>CSS</span>
-            <span>70%</span>
-          </div>
-          <div class="medidor__pista" role="meter" aria-label="CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
-            <div class="medidor__barra" data-nivel="70"></div>
-          </div>
-        </li>
-        <li class="medidor">
-          <div class="medidor__etiqueta">
-            <span>JavaScript</span>
-            <span>55%</span>
-          </div>
-          <div class="medidor__pista" role="meter" aria-label="JavaScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55">
-            <div class="medidor__barra" data-nivel="55"></div>
-          </div>
-        </li>
-        <li class="medidor">
-          <div class="medidor__etiqueta">
-            <span>Git / GitHub</span>
-            <span>65%</span>
-          </div>
-          <div class="medidor__pista" role="meter" aria-label="Git y GitHub" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
-            <div class="medidor__barra" data-nivel="65"></div>
-          </div>
-        </li>
-      </ul>
+      <ul class="medidores" id="listaHabilidades"></ul>
       <p class="medidores__nota">Habilidades en constante actualización.</p>
     </section>
 
@@ -321,7 +286,7 @@
   </main>
 
   <footer class="pie">
-    <p>© <span id="anioActual">2026</span> Angel Rueda — Portafolio hecho en el curso de ADSO, SENA.</p>
+    <p>© <span id="anioActual">2026</span> Angel Rueda — Portafolio hecho en el curso de ADSO, SENA. · <time id="reloj" class="reloj" datetime=""></time></p>
   </footer>
 
   <button class="ir-arriba" id="irArriba" type="button" hidden>Subir</button>
@@ -338,6 +303,6 @@
     <div class="avatar__inicial" aria-hidden="true">AR</div>
   </template>
 
-  <script src="script.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
